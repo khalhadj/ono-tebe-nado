@@ -1,1 +1,114 @@
 /* место для вашего кода */
+@import "../fonts/fonts.css";
+@import "global.css";
+
+
+.header{
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.18px;
+  padding: 94px 49px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.header__menu {
+  margin-right: 39px;
+}
+
+.header__links-list{
+  display: flex;
+  gap: 0 32px;
+  text-underline-offset: 3px;
+  list-style-type: circle;
+}
+
+.link_active {
+  list-style-type: none;
+}
+
+.header__link_no-bullit{
+  text-decoration: none;
+}
+
+.header__logo {
+  width: 136px;
+  margin-right: 192px;
+}
+
+.header__logo-image{
+  object-fit: scale-down;
+}
+
+.header__address{
+}
+
+.address{
+  max-width: 240px;
+  text-underline-offset: 3px;
+  line-height: 1.35;
+  font-style: normal;
+}
+
+.tel,
+.email {
+  white-space: nowrap;
+}
+
+.cover{
+  text-transform: uppercase;
+}
+
+.cover__overlay {
+ background-image: url(../images/cover.jpg);
+ height: 757px;
+ opacity: 0.6;
+}
+
+.cover__title {
+
+}
+
+.aligned-text {
+  position: relative;
+  top: 165px;
+  left: 100px;
+}
+
+.aligned-text_center {
+  position: relative;
+  top: 300px;
+  left: 336px;
+}
+
+.aligned-text_right {
+  position: relative;
+  top: 420px;
+  left: 633px;
+}
+
+.cover__description {
+  position: relative;
+  top: 662px;
+  left: 78px;
+  display: flex;
+  gap: 79px;
+}
+
+.cover__description-text {
+  color: #FFF;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.3;
+  
+
+}
+
+.bet-button {
+  color: #FFF;
+  cursor: pointer;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
