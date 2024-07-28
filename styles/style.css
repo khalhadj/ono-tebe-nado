@@ -3,11 +3,11 @@
 @import "global.css";
 
 
-.header{
+.header {
   display: flex;
   align-items: center;
   letter-spacing: 0.18px;
-  padding: 94px 49px;
+  padding: 92px 49px;
   font-size: 18px;
   font-weight: 400;
 }
@@ -16,7 +16,7 @@
   margin-right: 39px;
 }
 
-.header__links-list{
+.header__links-list {
   display: flex;
   gap: 0 32px;
   text-underline-offset: 3px;
@@ -27,7 +27,7 @@
   list-style-type: none;
 }
 
-.header__link_no-bullit{
+.link_no-bullit {
   text-decoration: none;
 }
 
@@ -36,14 +36,13 @@
   margin-right: 192px;
 }
 
-.header__logo-image{
+.header__logo-image {
   object-fit: scale-down;
 }
 
-.header__address{
-}
+.header__address {}
 
-.address{
+.address {
   max-width: 240px;
   text-underline-offset: 3px;
   line-height: 1.35;
@@ -55,53 +54,66 @@
   white-space: nowrap;
 }
 
-.cover{
+.cover {
+  position: relative;
+  height: 757px;
   text-transform: uppercase;
+  background: no-repeat center url(../images/cover.jpg);
+  background-size: cover;
 }
 
 .cover__overlay {
- background-image: url(../images/cover.jpg);
- height: 757px;
- opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+
 }
 
 .cover__title {
-
+  position: absolute;
+  z-index: 1;
+  color: #FFF;
+  font-size: 100px;
+  font-weight: 700;
+  text-wrap: nowrap;
+  word-spacing: -23px;
+  letter-spacing: 30px;
 }
 
 .aligned-text {
-  position: relative;
+  position: absolute;
   top: 165px;
-  left: 100px;
+  left: 50px;
 }
 
 .aligned-text_center {
-  position: relative;
-  top: 300px;
+  position: absolute;
+  top: 291px;
   left: 336px;
 }
 
 .aligned-text_right {
-  position: relative;
-  top: 420px;
+  position: absolute;
+  top: 412px;
   left: 633px;
 }
 
 .cover__description {
-  position: relative;
-  top: 662px;
+  position: absolute;
   left: 78px;
+  bottom: 50px;
   display: flex;
+  align-items: center;
   gap: 79px;
 }
 
 .cover__description-text {
+  display: flex;
   color: #FFF;
   font-size: 22px;
   font-weight: 400;
-  line-height: 1.3;
-  
-
+  word-spacing: 18px;
 }
 
 .bet-button {
@@ -111,4 +123,7 @@
   font-size: 22px;
   font-weight: 500;
   text-transform: uppercase;
+  background-color: transparent;
+  padding: 12px 32px;
+  border: 1px solid #FFF;
 }
