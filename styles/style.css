@@ -19,16 +19,16 @@
 .header__links-list {
   display: flex;
   gap: 0 32px;
-  text-underline-offset: 3px;
+  text-underline-offset: 4px;
   list-style-type: circle;
 }
 
 .link_active {
-  list-style-type: none;
+  text-decoration: none;
 }
 
 .link_no-bullit {
-  text-decoration: none;
+  list-style-type: none;
 }
 
 .header__logo {
@@ -58,73 +58,78 @@
 /* СЕКЦИЯ COVER */
 
 .cover {
-  position: relative;
-  height: 757px;
+  display: flex;
+  flex-direction: column;
+  min-height: 757px;
   text-transform: uppercase;
-  background: no-repeat center url(../images/cover.jpg);
-  background-size: cover;
+  background: no-repeat center / cover url(../images/cover.jpg);
   margin-bottom: 179px;
+  position: relative;
 }
 
-.cover:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgb(0 0 0 / 0.6);
-}
-
-
-
-.cover__title {
+.overlay {
   position: absolute;
   z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.6;
+}
+
+.cover__title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 1;
+  padding: 165px 50px 126px 50px;
   color: #FFF;
   font-size: 100px;
   font-weight: 700;
-  text-wrap: nowrap;
-  word-spacing: -23px;
   letter-spacing: 30px;
 }
 
+.letter-spacing-extended {
+  letter-spacing: 60px;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0px;
+}
+
+
 .aligned-text {
-  position: absolute;
-  top: 165px;
-  left: 50px;
+  align-self: start;
 }
 
 .aligned-text_center {
-  position: absolute;
-  top: 291px;
-  left: 336px;
+  align-self: center;
 }
 
 .aligned-text_right {
-  position: absolute;
-  top: 412px;
-  left: 633px;
+  align-self: flex-end;
 }
 
 .cover__description {
-  position: absolute;
-  left: 78px;
-  bottom: 50px;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
   gap: 79px;
 }
 
 .cover__description-text {
   display: flex;
+  padding-left: 78px;
   color: #FFF;
   font-size: 22px;
   font-weight: 400;
   word-spacing: 18px;
+  text-transform: uppercase;
 }
 
 .bet-button {
+  font-family: Raleway;
   color: #FFF;
   cursor: pointer;
   text-align: center;
@@ -153,11 +158,17 @@
   display: flex;
   justify-content: center;
   gap: 25px;
-  padding: 26px 0 30px 0;
+  padding: 26px 0 32px 0;
   list-style: none;
 }
 
+.lots__card-list-item {
+  position: relative;
+}
+
 .card-link {
+  display: block;
+  text-decoration: none;
   text-underline-offset: 3px;
   text-decoration-color: #FFF;
   text-decoration-thickness: 1px;
@@ -172,56 +183,40 @@
   padding: 51px 40px 48px 40px;
   color: #FFF;
   position: relative;
-}
-
-
-.card:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgb(0 0 0 / 0.6);
+  background: no-repeat center / cover;
 }
 
 .card__title {
+  z-index: 10;
   font-size: 22px;
   font-weight: 700;
   line-height: 1.2;
   text-transform: uppercase;
-  z-index: 10;
+  text-decoration: underline solid #fff 1px;
 }
 
 .card__text {
+  font-family: Raleway;
   font-size: 20px;
   z-index: 10;
+
 }
 
 .black_line {
-  display: inline-block;
   text-decoration: underline solid #000 3px;
 }
 
-.without_line {
-  display: inline-block;
-  text-decoration: none;
-}
-
 .card_type_film {
-  background: no-repeat center url(../images/card-lot-01.jpg);
-  background-size: cover;
-  position: relative;
+  background-image: url(../images/card-lot-01.jpg);
+
 }
 
 .card_type_book {
-  background: no-repeat center url(../images/card-lot-02.jpg);
-  background-size: cover;
+  background-image: url(../images/card-lot-02.jpg);
 }
 
 .card_type_picture {
-  background: no-repeat center url(../images/card-lot-03.jpg);
-  background-size: cover;
+  background-image: url(../images/card-lot-03.jpg);
 }
 
 .lots__look-more-link {
@@ -234,7 +229,7 @@
 /*  СЕКЦИЯ ABOUT */
 
 .about {
-  margin-bottom: 190px;
+  margin-bottom: 187px;
 }
 
 .about__column {
@@ -272,19 +267,13 @@
   margin-bottom: 100px;
 }
 
-.about__text-list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  list-style: none;
-
-}
-
 .about__text {
+  display: flex;
   font-size: 20px;
+  gap: 24px;
   line-height: 1.2;
   letter-spacing: 0.4px;
-
+  flex-direction: column;
 }
 
 /*  FOOTER */
