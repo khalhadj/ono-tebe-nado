@@ -129,7 +129,7 @@
 }
 
 .bet-button {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   color: #FFF;
   cursor: pointer;
   text-align: center;
@@ -202,10 +202,6 @@
 
 }
 
-.black_line {
-  text-decoration: underline solid #000 3px;
-}
-
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
 
@@ -237,6 +233,7 @@
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto auto auto;
   grid-auto-flow: column;
+  padding-left: 10px;
 }
 
 .about__logo {
@@ -252,7 +249,7 @@
 
 .about__wrapper {
   grid-column: 2 / 3;
-  padding: 100px 24px 0 18px;
+  padding: 100px 24px 0 10px;
 }
 
 .about__logo-image {
